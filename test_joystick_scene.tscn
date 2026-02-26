@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c3c555pacsh1h"]
+
+[ext_resource type="Script" uid="uid://bvv3bh63nutpa" path="res://assets/scripts/systems/InputManager.gd" id="1_bh6r2"]
+[ext_resource type="Script" uid="uid://dhdgq0de7wxx0" path="res://assets/scripts/ui/VirtualJoystick.gd" id="3_ckn5y"]
+
+[node name="TestJoystickScene" type="Node2D" unique_id=1444350956]
+
+[node name="InputManager" type="Node" parent="." unique_id=1496584381]
+script = ExtResource("1_bh6r2")
+
+[node name="Background" type="ColorRect" parent="." unique_id=600663387]
+modulate = Color(0.1, 0.1, 0.2, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=726018875]
+
+[node name="Control" type="Control" parent="UI" unique_id=1224465657]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Joystick" type="Control" parent="UI/Control" unique_id=1670739831]
+anchors_preset = 0
+anchor_left = 0.1
+anchor_top = 0.6
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("3_ckn5y")
+
+[node name="Base" type="ColorRect" parent="UI/Control/Joystick" unique_id=1556530449]
+modulate = Color(0.5, 0.5, 0.5, 0.8)
+layout_mode = 1
+offset_right = 200.0
+offset_bottom = 200.0
+
+[node name="Stick" type="ColorRect" parent="UI/Control/Joystick" unique_id=913602229]
+modulate = Color(0.8, 0.8, 0.8, 0.9)
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 100.0

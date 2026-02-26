@@ -1,0 +1,28 @@
+{
+  "package": "com.yourgame.douyin",
+  "name": "游戏名称",
+  "version": "1.0.0",
+  "description": "游戏描述",
+  "main": "html5/index.html",
+  "minPlatformVersion": "1060",
+  "icon": "icon.svg",
+  "orientation": "portrait",
+  "network": {
+    "request": true,
+    "socket": true
+  },
+  "subpackages": [
+    {
+      "name": "models",
+      "root": "html5/models",
+      "pages": ["models/index.html"]
+    },
+    {
+      "name": "textures",
+      "root": "html5/textures",
+      "pages": ["textures/index.html"]
+    }
+  ],
+  "renderMode": "canvas",
+  "deviceOrientation": ["portrait", "portrait-upside-down"]
+}
